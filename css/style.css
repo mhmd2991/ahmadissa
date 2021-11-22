@@ -207,13 +207,14 @@ section {
 
 /*End Header Section*/
 /*Start Section Home*/
-.home {
+.home .home-content {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: flex-start;
     padding: 0 5rem;
     color: var(--whiteColor);
+    min-height: 100vh;
 }
 
 .home h2 {
