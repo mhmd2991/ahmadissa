@@ -1,1 +1,612 @@
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    transition: all .3s ease-in-out;
+    /*border: 1px solid red;*/
+}
 
+
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:root {
+    --yellowColor: #f9ca24;
+    --sectionColor: #333333;
+    --bodyColor: #111111;
+    --headerColor: #1a1a1a;
+    --boxColor: #222222;
+    --textColor: #eeeeee;
+    --whiteColor: hsl(0, 0%, 100%);
+    --mainTransition: .3s;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: var(--bodyColor);
+    overflow-x: hidden;
+    padding-left: 35rem;
+
+}
+
+::selection {
+    color: var(--sectionColor);
+    background-color: var(--yellowColor);
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--yellowColor);
+    border-radius: 50px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--boxColor);
+    border-radius: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-transform: capitalize;
+
+}
+
+p {}
+
+a {
+    display: block;
+    transition: var(--mainTransition);
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    padding: 1rem;
+    color: var(--whiteColor);
+    border-bottom: .1rem solid #fff4;
+}
+
+.title span {
+    display: inline-block;
+    color: var(--yellowColor);
+    background-color: var(--sectionColor);
+    padding: 0 .4rem;
+}
+
+/*Start Header Section*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35rem;
+    height: 100vh;
+    background-color: var(--headerColor);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    z-index: 1000;
+}
+
+.header .user {
+    margin: 0 auto;
+    height: 60%;
+}
+
+.header .user img {
+    width: 100%;
+    height: 60%;
+    clip-path: polygon(0 0, 100% 0%, 100% 88%, 51% 100%, 0 88%);
+    margin-bottom: .5rem;
+}
+
+
+.header .user .name {
+    color: var(--whiteColor);
+    font-size: 2.5rem;
+}
+
+.header .user .post {
+    color: var(--textColor);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    letter-spacing: .8px;
+}
+
+.header .navbar {
+    width: 100%;
+}
+
+.header .navbar ul {
+    padding: 0 2rem;
+}
+
+.header .navbar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--sectionColor);
+    color: var(--whiteColor);
+    border-radius: .5rem 0 .5rem 0;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: .8px;
+    padding: 0.5rem 0;
+    margin: 0.8rem 0;
+}
+
+.header .navbar ul li a i {
+    height: 30px;
+    width: 30px;
+    font-size: 1.5rem;
+}
+
+.header .navbar ul li a:hover,
+.header .navbar ul li a.active{
+    box-shadow: inset 500px 0px 0px var(--yellowColor);
+    border-radius: 0rem .5rem 0rem .5rem;
+}
+
+#menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    color: var(--whiteColor);
+    background-color: var(--sectionColor);
+    font-size: 1.3rem;
+    padding: 1rem;
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+}
+
+.header .socialmedia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.header .socialmedia li a {
+    color: var(--whiteColor);
+    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+    background-color: var(--boxColor);
+}
+
+.header .socialmedia li a:hover {
+    color: var(--yellowColor);
+}
+
+/*End Header Section*/
+/*Start Section Home*/
+.home {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5rem;
+    color: var(--whiteColor);
+}
+
+.home h2 {
+    font-size: 2rem;
+}
+
+.home h1 {
+    font-size: 4rem;
+}
+
+.home h1 span {
+    color: var(--yellowColor);
+}
+
+.home p {
+    color: var(--textColor);
+    text-transform: capitalize;
+    letter-spacing: .8px;
+    padding: 1rem 0;
+}
+
+.home .btn,
+.about .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: var(--whiteColor);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.home .btn i,
+.about .btn i {
+    height: 25px;
+}
+
+.home .btn:hover {
+    box-shadow: inset 208px 0px 0px var(--yellowColor);
+}
+
+.about .btn:hover {
+    box-shadow: inset 245px 0px 0px var(--yellowColor);
+}
+
+/*End Section Home*/
+
+/*Start Section About*/
+.about {}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info {
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3 {
+    font-size: 1.5rem;
+    color: var(--yellowColor);
+    letter-spacing: .8px;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.about .row .info span {
+    color: var(--textColor);
+    padding: 0 .5rem;
+}
+
+.about .btn {
+    width: 240px;
+}
+
+.about .row .experiences {
+    flex: 1 1 48rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    gap: 15px;
+}
+
+.about .row .experiences .box {
+    background-color: var(--boxColor);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.about .row .experiences span {
+    font-size: 2rem;
+    color: var(--yellowColor);
+}
+
+.about .row .experiences h3 {
+    font-size: 1.2rem;
+    color: var(--whiteColor);
+}
+
+/*End Section About*/
+
+/*Start Section Education*/
+.education {}
+
+.education .education-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .education-content .box {
+    padding-left: 3rem;
+    margin: 3rem 1rem 3rem 1rem;
+    border-left: .1rem solid var(--whiteColor);
+    position: relative;
+}
+
+.education .education-content .box i {
+    position: absolute;
+    left: -25px;
+    top: -48px;
+    width: 3rem;
+    height: 3rem;
+    color: var(--whiteColor);
+    background-color: var(--yellowColor);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education .education-content .box span {
+    color: var(--textColor);
+    background-color: var(--boxColor);
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+}
+
+.education .education-content .box h3 {
+    color: var(--whiteColor);
+    letter-spacing: .8px;
+    padding-top: 1.5rem;
+}
+
+.education .education-content .box p {
+    color: var(--textColor);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    padding: 1rem 0;
+}
+
+/*End Section Education*/
+/*Start Section Portfolio*/
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.portfolio .portfolio-content .box {
+    padding-left: 3rem;
+    margin: 3rem 1rem 2rem 1rem;
+    position: relative;
+}
+
+.portfolio .portfolio-content .box i {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--whiteColor);
+    background-color: var(--yellowColor);
+    top: -13px;
+    left: -20px;
+}
+
+.portfolio .portfolio-content .box span {
+    color: var(--textColor);
+    background-color: var(--boxColor);
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+
+}
+
+.portfolio .portfolio-content .box h3 {
+    color: var(--whiteColor);
+    letter-spacing: 0.8px;
+    padding-top: 1.5rem;
+}
+
+.portfolio .portfolio-content .box p {
+    color: var(--textColor);
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+/*End Section Portfolio*/
+/*Start Section Contact*/
+.contact .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 15px;
+}
+
+.contact .row .contact-info {
+    padding: 3rem;
+    padding-bottom: 0;
+}
+
+.contact .row .contact-info h3 {
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.contact .row .contact-info .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .row .contact-info .info p {
+    color: var(--textColor);
+    padding: 1rem 0;
+}
+
+.contact .row .contact-info .info p i {
+    color: var(--yellowColor);
+    padding-right: 1rem;
+}
+
+.contact .row form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .input {
+    padding: .5rem;
+    margin: 1rem 0;
+    background: var(--sectionColor);
+    color: var(--whiteColor);
+    text-transform: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact .row form .input::placeholder {
+    text-transform: capitalize;
+}
+
+.contact .row form .message {
+    resize: none;
+    height: 7rem;
+}
+
+.contact .row form .btn {
+    padding: .7rem 3rem;
+    background: var(--sectionColor);
+    color: var(--whitecolor);
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.contact .row form .btn:hover {
+    box-shadow: inset 170px 0px 0px var(--yellowColor);
+}
+
+.contact .row form .btn i {
+    color: var(--yellowColor);
+    font-size: 1.1rem;
+    margin-left: .5rem;
+}
+
+.contact .row form .btn:hover i {
+    color: var(--sectionColor);
+}
+
+form.error input[type="email"]{
+   border: 1px solid red;
+}
+
+form.success input[type="email"]{
+   border: 1px solid transparent;
+}
+/*End Section Contact*/
+.scrollToTop {
+    padding: 0.5rem .8rem;
+    background-color: var(--boxColor);
+    font-size: 1.2rem;
+    color: var(--yellowColor);
+    text-align: center;
+    position: fixed;
+    bottom: 1rem;
+    right: -3rem;
+    cursor: pointer;
+}
+
+.scrollToTop.show {
+    right: 2rem;
+}
+/*media queries*/
+@media(max-width: 991px) {
+    .header {
+        left: -250%;
+    }
+
+    .header.active {
+        left: 0%;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .about .row .info {
+        padding-left: 1rem;
+    }
+
+    .about .row .experiences .box {
+        margin: 0;
+    }
+
+}
+
+@media(max-width: 565px) {
+    .header {
+        width: 100vw;
+    }
+}
+
+@media(max-width: 375px) {
+    #menu {
+        right: 1rem;
+    }
+
+    .contact .row {
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    }
+
+    .contact .row form {
+        align-items: flex-start;
+    }
+
+    .contact .row .contact-info {
+        padding: 1rem;
+    }
+
+    .contact .row form {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .contact .row form .btn {
+        margin: auto;
+    }
+}
+
+@media (max-width:768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+}
