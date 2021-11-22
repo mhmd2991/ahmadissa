@@ -69,4 +69,14 @@ function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-s
+
+let workArray = ['business consulting', 'business strategy', 'leadership', 'negotiation'];
+let post = document.querySelector("#post");
+
+function rend() {
+    let randomWork = workArray[Math.floor(Math.random() * workArray.length)];
+    post.innerHTML = randomWork;
+}
+setInterval(function () {
+    rend()
+}, 1500);
